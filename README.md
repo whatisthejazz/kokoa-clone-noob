@@ -1,3 +1,3 @@
 # kokoa clone 
 
-CSS Got So Much Better
+HTML and CSS are so much better!
