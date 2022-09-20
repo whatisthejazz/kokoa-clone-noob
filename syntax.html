@@ -1,0 +1,122 @@
+<!--BEM???-->
+BEM Bolck-Elements-Modifier의 준말, HTML-CSS class 
+naming 시 편의를 위한 규칙
+id변수는 가시성,즉시성이 떨어짐. programmer사이 class
+변수만 사용하자는 약속.
+ex)form_text-big, form_text-orange
+예제를 보면 block-elem-mod 순. 기존 class 정의 시 단순
+목적정의를 위한 naming으로 가시성이 상대적으로 떨어지지만,
+BEM정의는 함수만봐도 어떠한 카테고리인지 확인가능.
+BEM이나 id,clalss 정의 중 nichole은 BEM 강조
+
+<!--ICON?-->
+CSS 상 icon 구현법은 크게 2개로 구분.
+heroicons의 icon code를 복붇하든가
+fontawesome의 js형식 code 복붙하든가.
+js형식 icon code 사용을 위해선 code </body> 바로 직전 
+js script를 삽입해야 사용가능하다.
+
+<!--input submit syntax-->
+<input type="submit" value="name" />
+submit의 placeholder 역할은 value가 한다.
+
+<!--CSS import-->
+css 확장자 folder 생성 후 coding.
+ <!--Class 내 Class -->
+ .classname1 .classname2{
+    attribute: ;
+ }
+ <!--Son Class 주의사항-->
+ flex box를 son class에 적용한다. 이는 Parents class에 flex
+ box가 적용되어도 son class의 개별적용을 위해선 son class에
+ flex box를 다시 한번 적용시킨다.
+
+ <!--nth-child(), first-child()-->
+ .classname1:first-child 첫번째 개체명 {
+    attr:;
+ }
+ .classname1:nth-child(순번){
+    attr:;
+ }
+ 
+ <!--display:flex와 text-align:center 차이-->
+ test-align:Center는 element를 제외한 text 형식의 align.
+ text는 display 형식이 적용 안된다.
+ display:flex는 text를 제외한 element의 일렬정렬방식
+
+ <!--Reset Css-->
+ html 자체적 형식으로 인해 web을 제작하기 전 css reset을 하여
+ margin, padding 등 zero-base로 초기화.
+
+ <!--css병합-->
+ web 최적화를 위해 각 categories 별 css 파일을 
+ 병합하는 것이 좋다.
+ 
+ <!--input attr별 적용 syntax-->
+ #login-form input::placeholder{
+    color: rgba(0,0,0,0.4);
+}
+#login-form input:focus{
+    border-color: var(--yellow);
+}
+#login-form input[type="submit"]{
+   margin-top:30px;
+}
+
+<!--나폴레옹 분할 정복법 Import-->
+root variable 정의를 위한 variable.css file 생성.
+css파일의 병합을 위해선 IMPORT 무조건 해라.
+
+<!--Not Syntax-->
+classname.not([var=""]){
+    attr:;
+}
+not은 위 ex처럼 사용하는 것. not() 즉, 괄호 안을 제외하여
+styling을 적용하는 것이다.
+
+<!--input placeholder attr-->
+input placeholder 속성 부여
+input::placeholder{
+   attr:;
+} 일반 var처럼 :이 아닌 ::
+
+<!--page 이동-->
+<form action="###.html" method="get"></form>
+페이지 이동을 위해 form action var를 통해 가능.
+또한 백엔드 서버 보안을 위한 post method 방법이 있으나,
+우리는 서버가 없기 때문에 get 방식.
+예시는 get방식으로 ###.html 이동 action variable.
+
+<!--box sizing-border box-->
+200px box에 50 padding 값을 준다고 가정.
+CSS는 box px을 유지하고 padding 값을 준다. 즉, 사용자가 원한 box size와
+padding 값을 줄려고 함. 때문에 200px box + 50 padding = 250px box가 나옴
+그러나 이는 우리가 원한 px이 아님. 때문에 padding 값을 주더라도 box size는
+그대로 두는 명령어가 필요 -> box sizeing-border box
+css에게 우리가 어떠한 값을 주더라도 box size는 그대로 두라는 명령어.
+
+<!--position relative, absoulte-->
+--position에는 fixed, relative, absoulte 등 있음.
+가장 가까이에 위치한 var를 중점으로 움직이고 싶을 때, position:absolute 사용
+중점이 되는 var의 좌표를 찍어주는 역할 = position:relative.
+즉, relative var를 좌표로 absoulte var를 이동하는 것. 두 attr은 무조건 같이사용
+
+<!--단축키-->
+h1>ul>li>span*4
+위 예시를 사용하면 빠르게 만들 수 있다. 방법론만 알고있자
+
+<!--아이콘 색상 변경-->
+#friends-display-link i{
+   color: rgba(0,0,0,0.2);
+}
+아이콘도 글자이기 때문에 var i{color:;}로 변경 가능함. 
+
+navigation bar syntax
+<nav class="">
+   <ul>
+      <li class=""></li>
+      <li class=""></li>
+      <li class=""></li>
+      <li class=""></li>
+   (<ul>
+</nav>

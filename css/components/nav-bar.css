@@ -1,0 +1,46 @@
+.status-bar{
+    position: fixed;
+    width: 100%;
+}
+.nav {
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    background-color: rgb(249, 249, 250);
+    padding: 20px 50px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(121,121,121,0.3);
+}
+.nav__ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__link{
+    position: relative;
+}
+
+
+.nav__chat{
+    background-color: tomato;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    position:absolute;
+    left: 20px;
+    top: -18px;
+}
+
+.nav__noti{
+    color: tomato;
+    font-size:xx-large;
+    font-weight: 600;
+    position: absolute;
+    top: -35px;
+    right: -6px;
+}
