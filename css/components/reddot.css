@@ -1,0 +1,19 @@
+.reddot-father{
+    position: relative;
+}
+.reddot{
+    color: tomato;
+    font-size:xx-large;
+    font-weight: 600;
+    top: -26px;
+    right: -5px;
+    position: absolute;
+}
+.areddot{
+    color: tomato;
+    font-size:xx-large;
+    font-weight: 600;
+    top: -35px;
+    right: 7px;
+    position: absolute;
+}

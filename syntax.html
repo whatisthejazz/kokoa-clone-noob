@@ -120,3 +120,52 @@ navigation bar syntax
       <li class=""></li>
    (<ul>
 </nav>
+
+본인이 flex의 개념을 이해하고있는지 테스트하고 싶다면 7:12에서 멈추고 직접 만들어보자.
+flex의 영향을 받고싶지 않은 녀석들은 div를 하나 더씌워서 부모-자식관계를 끊고 부모-손자 관계를 만든다.
+
+같은 component를 가진 개체를 따로 적용하고 싶을 때, 다른 이름의 class 추가
+
+<!--Modifier-->
+동일 fles-children 좌우 방향만 바꾸고 싶을 때
+flex-direction:row-reverse;
+row-riverse로 flex-children의 reverse 속성 부여 가능
+Modifier를 실행한 결과이다. 동일 개체의 copy paste문을 수정하고 싶을 때,
+class 명을 추가하여 modify 가능. 
+
+flex container
+flex container 내 container는 display:flex 필요없다.
+ex) <div class="abc"> <--flex
+    </div>
+    <div class="abc def"> <--def class 도 display:flex
+    </div>
+
+<!--Animation 심화-->
+animation 마지막값을 기억하고 싶다면?
+formwards를 써라
+@keyframes hideSplahScreen{
+   from {
+       opacity: 1;
+   }
+   to {opacity: 0;
+       visibility:hidden;
+   }
+}
+.splash-screen{
+   background-color: var(--yellow);
+   position: absolute;
+   height: 100vh;
+   width: 100vw;
+   top: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 130px;
+   animation: hideSplahScreen 0.4s ease-in-out forwards;
+   animation-delay: 2s;
+}
+forwards는 to opacity:0 을 기억하는 것.
+animatinon page는 애니메이션이 끝난 후 레이아웃에 계속 남아있다.
+opacity를 0으로 했으니 안보이는 것 일뿐.
+CSS상에서 이를 web에서 삭제는 불가하나 삭제한것처럼 보이게는 할 수 있다.
+visibility:hidden;을 쓰면, web에서 삭제된것처럼 보여 다른 동작도 가능케함.
