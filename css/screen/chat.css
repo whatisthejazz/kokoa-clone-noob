@@ -1,6 +1,6 @@
 .chat-screen{
     background-color: #abc1d1;
-    height: 110000vh;
+    height: 500vh;
 }
 
 .chat-screen .status-bar{
@@ -32,11 +32,23 @@
     margin-left: 45px;
 }
 
+@keyframes fadin{
+    from{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to{ transform: none;
+        opacity: 1;
+    }
+}
+
 .main-chat{
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: fadin 0.8s linear;
+    
 }
 .chat__timestamp{
     color: white;
@@ -142,4 +154,10 @@
 }
 .reply__column:last-child button i{
     opacity: 1;
+}
+
+.reply:focus-within .reply:first-child,
+.reply:focus-within .fa-smile,
+.reply:focus-within .button{
+    opacity: 0;
 }

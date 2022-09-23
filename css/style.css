@@ -9,6 +9,7 @@
 @import "components/reddot.css";
 @import "components/icon-raw.css";
 @import "components/alt-screen-header.css";
+@import "components/no-mobile.css";
 /* Screen*/
 @import "screen/login.css";
 @import "screen/friends.css";
